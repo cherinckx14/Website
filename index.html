@@ -12,13 +12,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 #Me {
   height: 400px;
 }
-#MyPhotos {
-  display: none;
-  }
-#OtherPhotos {
-  display: none;
-  }
 </style>
+  <script>
+    onEvent ("flip1", "click", function () {
+      document.getElementById("MyPhotos").innerHTML.style.display = "block";
+      document.getElementById("OtherPhotos").innerHTML.style.display = "none";
+    });     
+    onEvent ("flip1", "click", function () {
+      document.getElementById("OtherPhotos").innerHTML.style.display = "block";
+      document.getElementById("MyPhotos").innerHTML.style.display = "none";
+    });       
+  </script>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -59,8 +63,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>My Portfolio</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
-      <button class="flip" onclick="setVisible(MyPhotos)" onclick="setHidden(OtherPhotos)" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
-      <button class="flip" onclick="setVisible(OtherPhotos)" onclick="setHidden(MyPhotos)" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
+      <button class="flip" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
+      <button class="flip1" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
     </div>
     </div>
   </header>
