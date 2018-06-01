@@ -12,13 +12,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 #Me {
   height: 400px;
 }
-/*#MyPhotos {
+#MyPhotos {
   display: block;
   }
 #OtherPhotos {
   display: none;
   }
-  */
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -60,8 +59,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>My Portfolio</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
-      <button onclick="document.getElementById('MyPhotos').innerHTML.style.display = block" onclick="document.getElementById('OtherPhotos').innerHTML.style.display = none" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
-      <button onclick="document.getElementById('OtherPhotos').innerHTML.style.display = block" onclick="document.getElementById('MyPhotos').innerHTML.style.display = none" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
+      <button onclick="document.getElementById('MyPhotos').style.display = block" onclick="document.getElementById('OtherPhotos').style.display = none" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
+      <button onclick="document.getElementById('OtherPhotos').style.display = block" onclick="document.getElementById('MyPhotos').style.display = none" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
     </div>
     </div>
   </header>
