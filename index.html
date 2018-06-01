@@ -19,6 +19,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   display: none;
   }
 </style>
+  <script>
+    function myPhotosStyle() {
+      var x = document.getElementById("MyPhotos");
+      var y = document.getElementById("OtherPhotos");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+    if (y.style.display === "block") {
+      y.style.display = "none";
+    }
+    }
+    function otherPhotosStyle() {
+      var x = document.getElementById("MyPhotos");
+      var y = document.getElementById("OtherPhotos");
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      }
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      }
+    }
+  </script>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -59,8 +81,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>My Portfolio</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
-      <button onclick="document.getElementById('MyPhotos').style.display = 'block'" onclick="document.getElementById('OtherPhotos').style.display = 'none'" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
-      <button onclick="document.getElementById('OtherPhotos').style.display = 'block'" onclick="document.getElementById('MyPhotos').style.display = 'none'" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
+      <button onclick="myPhotosStyle()" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
+      <button onclick="otherPhotosStyle()" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
     </div>
     </div>
   </header>
