@@ -19,17 +19,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   display: none
   }
 </style>
-  <script src="jquery-3.3.1.min.js">  
-$(".Change1").click(function() {
-$(".OtherPhotos").hide();
-$(".MyPhotos").show();
-});
-
- $(".Change2").click(function() {
- $(".OtherPhotos").show()
- $(".MyPhotos").hide();
- } );
-  </script>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -70,8 +59,8 @@ $(".MyPhotos").show();
     <h1><b>My Portfolio</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
-      <button class="Change1"><class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
-      <button class="Change2"><class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
+      <button class="Change1" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>My Photos</button>
+      <button class="Change2" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Other Photos</button>
     </div>
     </div>
   </header>
@@ -362,6 +351,18 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    $('.MyPhotos').hide();
+$(".Change1").click(function() {
+$(".OtherPhotos").hide();
+$(".MyPhotos").show();
+});
 
+ $(".Change2").click(function() {
+ $(".OtherPhotos").show()
+ $(".MyPhotos").hide();
+ } );
+  </script>
 </body>
 </html>
